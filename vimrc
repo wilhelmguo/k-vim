@@ -105,7 +105,7 @@ set t_ti= t_te=
 " 鼠标暂不启用, 键盘党....
 " set mouse-=a
 " 启用鼠标
-set mouse=a
+set mouse=v
 " Hide the mouse cursor while typing
 " set mousehide
 
@@ -342,8 +342,7 @@ nnoremap gj j
 
 " F1 废弃这个键,防止调出系统帮助
 " I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
-noremap <F1> <Esc>"
-
+nnoremap <silent> <F1> :NERDTreeToggle<CR>
 " F2 行号开关，用于鼠标复制代码用
 " 为方便复制，用<F2>开启/关闭行号显示:
 function! HideNumber()
